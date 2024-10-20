@@ -159,7 +159,6 @@ function SkillCheck({ attributes, skills }) {
     return (
         <div>
             <h1>Skill Check</h1>
-            <hr/>
 
             { result && (
                 <div>
@@ -187,7 +186,6 @@ function SkillCheck({ attributes, skills }) {
         </div>
     );
 }
-
 
 export default function CharacterSheet({ character, setSkills, setAttributes, children } : { character: Character, setSkills: any, setAttributes: any, children: any }) {
     return (

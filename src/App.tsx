@@ -98,12 +98,15 @@ function App() {
         <div>
           {
             characters.map((character) => (
-              <CharacterSheet key={character.id}
-                  character={character}
-                  setSkills={(newSkills: Array<CharacterSkill>) => setSkills(character.id, newSkills)}
-                  setAttributes={(newAttributes: Array<CharacterAttribute>) => setAttributes(character.id, newAttributes)}>
-                <button onClick={() => removeCharacter(character.id)}>Remove Character</button>
-              </CharacterSheet>
+              <>
+                <hr/>
+                <CharacterSheet key={character.id}
+                    character={character}
+                    setSkills={(newSkills: Array<CharacterSkill>) => setSkills(character.id, newSkills)}
+                    setAttributes={(newAttributes: Array<CharacterAttribute>) => setAttributes(character.id, newAttributes)}>
+                  <button onClick={() => removeCharacter(character.id)}>Remove Character</button>
+                </CharacterSheet>
+              </>
             ))
           }
         </div>
