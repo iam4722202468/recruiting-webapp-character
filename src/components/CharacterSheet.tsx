@@ -152,7 +152,8 @@ function SkillCheck({ attributes, skills }) {
         setResult({
             total,
             random,
-            success: total >= random
+            dc,
+            success: (total + dc) >= random
         })
     }
 
@@ -162,8 +163,9 @@ function SkillCheck({ attributes, skills }) {
 
             { result && (
                 <div>
-                    <p>Roll: { result.random }</p>
                     <p>Skill ({ selectedSkill }): { result.total }</p>
+                    <p>You Rolled: { result.random }</p>
+                    <p>The DC was { result.dc }</p>
                     <h2>Result: { result.success ? 'Success' : 'Failure' }</h2>
                 </div>
             )}
