@@ -1,5 +1,7 @@
 import type { Attributes, Class } from "./types";
 
+export const GITHUB_USER = 'iam4722202468'
+
 export const ATTRIBUTE_LIST = [
     'Strength',
     'Dexterity',
